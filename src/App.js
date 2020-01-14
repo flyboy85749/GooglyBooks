@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Books from './components/Books';
+import Footer from './components/Footer';
 
 class App extends Component {
    
@@ -13,6 +14,7 @@ class App extends Component {
         <Header />
         <Navbar />
         <Books />
+        <Footer />
       </div>
     );
   }

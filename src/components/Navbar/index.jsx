@@ -6,26 +6,30 @@ import './navbar.css';
 const Navbar = () => {
 
     return (
-        
+
         <nav className="navbar" >
-
-            <ul className="navbar">
-                <li className="navbar-item">
-                    <a href="/search">
-                        Search
+            <div className="container">
+                <div className="columns">
+                    <div className="column-is-half">
+                        <ul className="navbar">
+                            <li className="navbar-item">
+                                <a href="/search">
+                                    Search
                         </a>
-                </li>
-                <li className="navbar-item">
-                    <a href="/saved">
-                        Saved
+                            </li>
+                            <li className="navbar-item">
+                                <a href="/saved">
+                                    Saved
                         </a>
-                </li>
-            </ul>
-
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </nav>
-       
+
     );
-    
+
 }
 
 export default Navbar;

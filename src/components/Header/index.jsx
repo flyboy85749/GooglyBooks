@@ -3,10 +3,17 @@ import './header.css';
 
 const Header = () => {
 	return (
-		<header>
-		<i className="fas fa-book fa-2x"></i>
-		<h1>Welcome to Googly Books!</h1>
-		</header>
+		<div className="hero">
+			<div className="container">
+
+				<header>
+					
+					<h1>Welcome to Googly Books!</h1>
+					<i className="fas fa-book fa-3x"></i>
+				</header>
+
+			</div>
+		</div>
 	)
 }
 
