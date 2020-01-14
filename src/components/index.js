@@ -1,0 +1,1 @@
+// This file serves as a “barrel” through which all sibling components are exported. export { default as App } from './app'
