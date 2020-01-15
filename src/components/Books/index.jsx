@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchArea from '../SearchArea';
-import axios from 'axios';
+import request from 'superagent';
 import BookList from '../BookList';
 
 class Books extends Component {
@@ -15,16 +15,14 @@ class Books extends Component {
 
     searchBooks = (e) => {
         e.preventDefault();
-        axios
+        request
             .get("https://www.googleapis.com/books/v1/volumes?q=" + this.state.searchField, {header: {'Access-Control-Allow-Origin': '*'}})
+            .query({ q: this.searchField })
             .then((data) => {
                 console.log(data);
-                this.setState({ 
-                    books: 
-                        data.data.items
-                }) 
+                this.setState({ books: [...data.body.items] })
                 
-            })
+            });
     }
 
     handleSearch = (e) => {
